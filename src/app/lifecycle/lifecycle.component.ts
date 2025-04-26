@@ -24,39 +24,46 @@ export class LifecycleComponent
 {
   @Input() text?: string;
 
+  // the standard Js constructor Runs when Angular instantiates the component.
   constructor() {
     console.log('CONSTRUCTOR');
   }
-
+  // Runs once after Angular has initialized all the component's inputs.
   ngOnInit() {
     console.log('ngOnInit');
   }
-
+  // Runs every time the component's inputs have changed.
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges');
     console.log(changes);
   }
 
+  // Runs every time this component is checked for changes.
   ngDoCheck() {
     console.log('ngDoCheck');
   }
 
+  // Runs once after the component's content has been initialized.
   ngAfterContentInit() {
     console.log('ngAfterContentInit');
   }
 
+  // Runs every time this component content has been checked for changes.
   ngAfterContentChecked() {
     console.log('ngAfterContentChecked');
   }
 
+  // 	Runs once after the component's view has been initialized.
   ngAfterViewInit() {
     console.log('ngAfterViewInit');
   }
 
+  // Runs every time the component's view has been checked for changes.
   ngAfterViewChecked() {
     console.log('ngAfterViewChecked');
   }
 
+  // Runs once before the component is destroyed.
   ngOnDestroy() {
     console.log('ngOnDestroy');
   }
